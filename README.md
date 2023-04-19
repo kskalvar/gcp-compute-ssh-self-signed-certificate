@@ -2,21 +2,16 @@ AWS Elastic Kubernetes Service (EKS) Kubeflow QuickStart
 =======================================================
 Abstract:
 ```
-With the recent advent of integrated development environments (IDE) such as AWS SageMaker Studio
-for Machine Learning (ML), it's now possible to provide a single integrated view where you can
-access purpose-built tools to perform ML development tasks from preparing data to building,
-training, and deploying your ML models.
+Although the Google Cloud Platform (GCP) provides an easy way to access Compute Engine Virtual
+Machine (VM) Instances either through the GCP Console or the GCP SDK gcloud command line, there may
+be a use-case in which you would prefer to use ssh.
 
-Kubeflow is an open source ML IDE you can also access purpose-built tools to perfom ML development
-tasks from preparing data to building, training, and deploying your ML models, but it runs on
-Kubernetes.  But because it runs on Kubernetes its portable and scalable across multiple cloud and
-on premise infrastructure.
-
+In this presentation we will show you how to use configure ssh to login to a VM Instance
 ```
-This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
+This solution shows how to create a GCP Compute Engine SSH Self-Signed Certificate  
 ```
-Note: This how-to assumes you are creating an eks cluster in us-east-1, you have access to your
-AWS Account, and you can login to an EC2 Instance remotely.
+Note: This how-to assumes you are creating an GCP Compute Instance in us-east-4a, you have access to your
+GCP Account.
 ```
 Steps:  
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
