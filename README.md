@@ -1,4 +1,4 @@
-AWS Elastic Kubernetes Service (EKS) Kubeflow QuickStart  
+Using SSH and a Self-Signed Certificate with GCP Compute Engine  
 =======================================================
 Abstract:
 ```
@@ -6,12 +6,11 @@ Although the Google Cloud Platform (GCP) provides an easy way to access Compute 
 Machine (VM) Instances either through the GCP Console or the GCP SDK gcloud command line, there may
 be a use-case in which you would prefer to use ssh.
 
-In this presentation we will show you how to use configure ssh to login to a VM Instance
+In this presentation we will show you how to configure ssh to login to a VM Instance
 ```
 This solution shows how to create a GCP Compute Engine SSH Self-Signed Certificate  
 ```
-Note: This how-to assumes you are creating an GCP Compute Instance in us-east-4a, you have access to your
-GCP Account.
+Note: This how-to assumes GCP SDK installed locally and configured to access the GCP Cloud remotely.
 ```
 Steps:  
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
