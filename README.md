@@ -16,6 +16,7 @@ Note: This how-to assumes you have installed GCP SDK locally and configured it t
 ```
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
+* [Create a ssh self-signed certificate](#Create-a-ssh-self-signed-certificate)
 * [Create cloud shell](#Create-cloud-shell)
 * [Connect to cloud shell and Update Basic Tools](#Connect-to-cloud-shell-and-Update-Basic-Tools)
 * [Delete cloud shell](#Delete-cloud-shell)
@@ -33,7 +34,7 @@ gcloud services list --enabled | grep Compute
 
 ```
 
-### Create a ssh self-signed certificate
+### Create a ssh self signed certificate
 
 I've added the associated GCP Service name, date, and userid to the gcp-key name to help identify
 which GCP Service it's targeted to as well what account you will be required to use to login to the
@@ -115,11 +116,10 @@ gcloud compute instances delete cloud-shell --quiet
 ```
 ### Troubleshooting
 
-```
 * When ssh'ing to the GCP Compute VM Instance you may receive warnings.  Remove the
 existing .ssh directory in your home directory should elimiate these warnings.
 
-```
+
 
 ### References
 
