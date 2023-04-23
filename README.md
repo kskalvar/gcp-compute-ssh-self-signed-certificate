@@ -66,7 +66,7 @@ kskalvar:ssh-rsa \<key\>
 #### Copy the metadata to the GCP Project Compute Settings 
 
 We'll use the GCP SDK to upload the metadata to the GCP Compute Service, but you can also use
-the GCP Console to do this as well.
+the GCP Console to do this as well. See: GCP Compute Engine/Settings/Metadata/SSH KEYS section
 
 ```
 gcloud compute project-info add-metadata \
