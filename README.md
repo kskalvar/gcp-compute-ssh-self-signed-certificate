@@ -8,12 +8,10 @@ be a use-case in which you would prefer to use ssh.
 
 In this presentation we will show you how to configure a self-signed certificate and upload the 
 certificate metatdata to the GCP Compute Service so you can ssh to a Compute VM Instance
-
 ```
 ```
 Note: This how-to assumes you have a GCP Account, have installed GCP SDK locally
       and have it configured it to access your project in the GCP Cloud
-
 ```
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
@@ -48,8 +46,8 @@ ssh-keygen -t rsa -f gcp-key-compute-kskalvar-2023-04-22 -C kskalvar -b 2048
 
 #### Edit gcp-key-metadata
 
-So we need to create a metadata file so it fits the format GCP Compute requires.  There's an
-before and after example below so you can see the results.
+So we need to create a metadata file that fits the format GCP Compute Settings/Metadata requires.
+There's an before and after example below so you can see the difference.
 
 ```
 cp gcp-key-compute-kskalvar-2023-04-22.pub gcp-key-compute-kskalvar-2023-04-22-pub-metadata
@@ -65,7 +63,7 @@ ssh-rsa \<key\> kskalvar
 After:  
 kskalvar:ssh-rsa \<key\>
 
-#### Copy the metadata to the GCP Project 
+#### Copy the metadata to the GCP Project Compute Settings 
 
 We'll use the GCP SDK to upload the metadata to the GCP Compute Service, but you can also use
 the GCP Console to do this as well.
@@ -120,7 +118,9 @@ gcloud compute instances delete cloud-shell --quiet
 * When ssh'ing to the GCP Compute VM Instance you may receive warnings.  Remove the
 existing .ssh directory in your home directory should elimiate these warnings.
 
-
+* Invalid ssh key entry - unrecognized format: ssh-rsa.  When viewing the cloud-shell VM logs you
+will notice an error for an "Invalid ssh key entry".  This error will not keep you from logging into
+the VM. See GCP Console/Compute Engine/VM Instances/cloud-shell/three dots on the right/View logs
 
 ### References
 
