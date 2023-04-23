@@ -11,12 +11,13 @@ certificate metatdata to the GCP Compute Service so you can ssh to a Compute VM 
 
 ```
 ```
-Note: This how-to assumes you have installed GCP SDK locally and configured it to access the GCP Cloud
+Note: This how-to assumes you have a GCP Account, have installed GCP SDK locally
+      and have it configured it to access your project in the GCP Cloud
 
 ```
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
-* [Create a ssh self-signed certificate](#Create-a-ssh-self-signed-certificate)
+* [Create a ssh self signed certificate](#Create-a-ssh-self-signed-certificate)
 * [Create cloud shell](#Create-cloud-shell)
 * [Connect to cloud shell and Update Basic Tools](#Connect-to-cloud-shell-and-Update-Basic-Tools)
 * [Delete cloud shell](#Delete-cloud-shell)
@@ -25,7 +26,7 @@ Steps:
 
 ### Check GCP Compute Engine API Enabled
 
-Be sure you have the GCP Compute Engine API is enabled so you can create your VM Instance.
+Be sure you have the GCP Compute Engine API enabled so you can create your VM Instance.
 Recommend you use the GCP Console.  But it will prompt you when you create the VM Instance using
 the GCP SDK if it isn't already enabled.
 
