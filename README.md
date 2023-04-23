@@ -55,11 +55,11 @@ s/ssh-rsa/kskalvar:ssh-rsa/
 s/ kskalvar$//
 
 ```
-Before:
-ssh-rsa <key> kskalvar
+Before:  
+ssh-rsa \<key\> kskalvar
 
-After:
-kskalvar:ssh-rsa <key>
+After:  
+kskalvar:ssh-rsa \<key\>
 
 #### Copy the metadata to the GCP Project 
 
