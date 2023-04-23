@@ -6,8 +6,8 @@ Although the Google Cloud Platform (GCP) provides an easy way to access a Comput
 Machine (VM) through the GCP Console or the GCP SDK gcloud command line, there may
 be a use-case in which you would prefer to use ssh.
 
-In this presentation we will show you how to configure a self-signed certificate and upload to
-the GCP Compute Service so you can ssh to a Compute VM Instance
+In this presentation we will show you how to configure a self-signed certificate and upload the 
+certificate metatdata to the GCP Compute Service so you can ssh to a Compute VM Instance
 
 ```
 ```
@@ -15,10 +15,21 @@ Note: This how-to assumes you have installed GCP SDK locally and configured it t
 
 ```
 Steps:  
-* [Create cloud_shell](#Create-cloud_shell)
+* [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
+* [Create cloud shell](#Create-cloud-shell)
 * [Troubleshooting](#Troubleshooting)
 * [References](#References)
 
+### Check GCP Compute Engine API Enabled
+
+Be sure you have the GCP Compute Engine API is enabled so you can create your VM Instance.
+Recommend you use the GCP Console.  But it will prompt you when you create the VM Instance using
+the GCP SDK if it isn't already enabled.
+
+```
+gcloud services list --enabled | grep Compute
+
+```
 
 ### Create a ssh self-signed certificate
 
@@ -34,12 +45,12 @@ ssh-keygen -t rsa -f gcp-key-compute-kskalvar-2023-04-22 -C kskalvar -b 2048
 #### Edit gcp-key-metadata
 
 So we need to create a metadata file so it fits the format GCP Compute requires.  There's an
-before and after example so you can see the results.
+before and after example below so you can see the results.
 
 ```
 cp gcp-key-compute-kskalvar-2023-04-22.pub gcp-key-compute-kskalvar-2023-04-22-pub-metadata
 
-# Vim or sed commands or use any text editor
+# vim or sed commands to use or use any text editor
 s/ssh-rsa/kskalvar:ssh-rsa/
 s/ kskalvar$//
 
@@ -61,7 +72,7 @@ gcloud compute project-info add-metadata \
 --project=<gcp project id>
 
 ```
-### Create cloud_shell
+### Create cloud shell
 
 We'll be using the GCP SDK installed locally to create a GCP Compute VM instance.  You could
 easily use the GCP Cloud Console if you're familiar with it.
@@ -100,7 +111,7 @@ gcloud compute instances delete cloud-shell --quiet
 ### Troubleshooting
 
 ```
-* When ssh'ing to the GCP Compute VM Instance you may receive warnings or errors.  Remove the
+* When ssh'ing to the GCP Compute VM Instance you may receive warnings.  Remove the
 existing .ssh directory in your home directory should elimiate these warnings.
 
 ```
