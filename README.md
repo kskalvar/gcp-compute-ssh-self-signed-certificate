@@ -17,6 +17,7 @@ Note: This how-to assumes you have installed GCP SDK locally and configured it t
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
 * [Create cloud shell](#Create-cloud-shell)
+* [Delete cloud shell](#Delete-cloud-shell)
 * [Troubleshooting](#Troubleshooting)
 * [References](#References)
 
@@ -93,6 +94,9 @@ NOTE: The userid you use to create the self-signed certificate is the userid you
 
 ```
 gcloud compute instances list
+
+```
+```
 ssh -i gcp-key-compute-kskalvar-2023-04-22 -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
 
 ```
@@ -101,7 +105,7 @@ Install Basic Tools
 sudo apt update
 
 ```
-### Delete cloud_shell
+### Delete cloud shell
 
 Using the GCP SDK installed locally to delete the GCP Compute VM Instance we used as the cloud_shell.
 ```
