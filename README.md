@@ -17,6 +17,7 @@ Note: This how-to assumes you have installed GCP SDK locally and configured it t
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
 * [Create cloud shell](#Create-cloud-shell)
+* [Connect to cloud shell and Update Basic Tools](#Connect-to-cloud-shell-and-Update-Basic-Tools)
 * [Delete cloud shell](#Delete-cloud-shell)
 * [Troubleshooting](#Troubleshooting)
 * [References](#References)
@@ -86,7 +87,7 @@ gcloud compute instances create cloud-shell \
 --scopes=https://www.googleapis.com/auth/cloud-platform
 
 ```
-### Connect to cloud_shell and Update Basic Tools
+### Connect to cloud shell and Update Basic Tools
 
 NOTE: The GCP Private Key you created should be in the directory you run ssh from  
 NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_shell
