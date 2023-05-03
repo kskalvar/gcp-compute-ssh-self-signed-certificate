@@ -102,10 +102,6 @@ NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_she
 NOTE: The userid you use to create the self-signed certificate is the userid you will use for login
 
 ```
-gcloud compute instances list
-
-```
-```
 ssh -i gcp-key-compute-kskalvar-2023-04-22 -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
 
 ```
