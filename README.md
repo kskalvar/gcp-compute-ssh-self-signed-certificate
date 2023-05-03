@@ -63,10 +63,11 @@ s/ssh-rsa/kskalvar:ssh-rsa/
 s/ kskalvar$//
 
 ```
+
+##### What your metadata should look like
 Before:  
 ssh-rsa \<key\> kskalvar
 
-##### What your metadata should look like
 After:  
 kskalvar:ssh-rsa \<key\>
 
