@@ -6,12 +6,13 @@ Although the Google Cloud Platform (GCP) provides an easy way to access a Comput
 Machine (VM) through the GCP Console or the GCP SDK gcloud command line, there may
 be a use-case in which you would prefer to use ssh.
 
-In this presentation we will show you how to configure a self-signed certificate and upload the 
-certificate metatdata to the GCP Compute Service so you can ssh to a Compute VM Instance
+In this presentation we will show you how to configure a self-signed certificate and upload the
+certificate metadata to the GCP Compute Service so you can ssh to a Compute VM Instance from your
+local machine.
 ```
 ```
 Note: This how-to assumes you have a GCP Account, have installed GCP SDK locally
-      and have it configured it to access your project in the GCP Cloud
+      and have it configured it to access your GCP project
 ```
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
