@@ -53,8 +53,13 @@ There's an before and after example below so you can see the difference.
 ```
 cp gcp-key-compute-kskalvar-2023-04-22.pub gcp-key-compute-kskalvar-2023-04-22-pub-metadata
 
-# vim or sed commands to use or use any text editor
+```
+##### vim or sed commands to use or use any text editor
+```
 s/ssh-rsa/kskalvar:ssh-rsa/
+
+```
+```
 s/ kskalvar$//
 
 ```
