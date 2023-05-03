@@ -53,11 +53,18 @@ There's an before and after example below so you can see the difference.
 ```
 cp gcp-key-compute-kskalvar-2023-04-22.pub gcp-key-compute-kskalvar-2023-04-22-pub-metadata
 
-# vim or sed commands to use or use any text editor
+```
+##### vim or sed commands to use or use any text editor
+```
 s/ssh-rsa/kskalvar:ssh-rsa/
+
+```
+```
 s/ kskalvar$//
 
 ```
+
+##### What your metadata should look like
 Before:  
 ssh-rsa \<key\> kskalvar
 
@@ -94,10 +101,6 @@ NOTE: The GCP Private Key you created should be in the directory you run ssh fro
 NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_shell  
 NOTE: The userid you use to create the self-signed certificate is the userid you will use for login
 
-```
-gcloud compute instances list
-
-```
 ```
 ssh -i gcp-key-compute-kskalvar-2023-04-22 -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
 
