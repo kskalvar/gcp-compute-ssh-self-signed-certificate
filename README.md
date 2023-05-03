@@ -66,6 +66,7 @@ s/ kskalvar$//
 Before:  
 ssh-rsa \<key\> kskalvar
 
+##### What your metadata should look like
 After:  
 kskalvar:ssh-rsa \<key\>
 
