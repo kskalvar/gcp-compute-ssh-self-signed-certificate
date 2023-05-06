@@ -2,7 +2,7 @@ Using SSH and a Self-Signed Certificate with GCP Compute Engine
 =======================================================
 Abstract:
 ```
-Although the Google Cloud Platform (GCP) provides an easy way to access a Compute Engine Virtual
+Google Cloud Platform (GCP) provides an easy way to access a Compute Engine Virtual
 Machine (VM) through the GCP Console or the GCP SDK gcloud command line, there may
 be a use-case in which you would prefer to use ssh.
 
