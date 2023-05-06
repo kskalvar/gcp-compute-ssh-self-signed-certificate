@@ -15,7 +15,7 @@ Note: This how-to assumes you have a GCP Account, have installed GCP SDK locally
       and have it configured it to access your GCP project
 ```
 Steps:  
-* [Check GCP Compute Engine API Enabled](#Check-GCP-Compute-Engine-API-Enabled)
+* [Check GCP Compute Engine API Enabled](#Check-GCP-compute-Engine-API-Enabled)
 * [Create a ssh self signed certificate](#Create-a-ssh-self-signed-certificate)
 * [Create cloud shell](#Create-cloud-shell)
 * [Connect to cloud shell and Update Basic Tools](#Connect-to-cloud-shell-and-Update-Basic-Tools)
@@ -40,7 +40,7 @@ which GCP Service it's targeted to as well what account you will be required to 
 GCP Compute VM Instance.
 
 ```
-ssh-keygen -t rsa -f gcp-key-compute-kskalvar-yyyy-mm-dd -C kskalvar -b 2048
+ssh-keygen -t rsa -f gcp-key-compute-kskalvar -C kskalvar -b 2048
 ```
 
 #### Edit gcp-key-metadata
@@ -49,7 +49,7 @@ So we need to create a metadata file that fits the format GCP Compute Settings/M
 There's an before and after example below so you can see the difference.
 
 ```
-cp gcp-key-compute-kskalvar-yyyy-mm-dd.pub gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata
+cp gcp-key-compute-kskalvar.pub gcp-key-compute-kskalvar-pub-metadata
 ```
 ##### vim or sed commands to use or use any text editor
 ```
@@ -73,7 +73,7 @@ the GCP Console to do this as well. See: GCP Compute Engine/Settings/Metadata/SS
 
 ```
 gcloud compute project-info add-metadata \
---metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata \
+--metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-pub-metadata \
 --project=<gcp project id>
 ```
 ### Create cloud shell
@@ -95,7 +95,7 @@ NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_she
 NOTE: The userid you use to create the self-signed certificate is the userid you will use for login
 
 ```
-ssh -i gcp-key-compute-kskalvar-yyyy-mm-dd -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
+ssh -i gcp-key-compute-kskalvar -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
 ```
 Install Basic Tools
 ```
@@ -122,7 +122,7 @@ Connect to Linux VMs
 https://cloud.google.com/compute/docs/connect/standard-ssh#openssh-client
 
 Using SSH and a Self-Signed Certificate with GCP Compute Engine  
-https://github.com/kskalvar/gcp-compute-ssh-self-signed-certificate
+https://github.com/kskalvar/gcp-compute-kskalvarssh-self-signed-certificate
 
 Using SSH and a Self-Signed Certificate with GCP Compute Engine Presentation  
 https://www.youtube.com/@kal_technology/videos
