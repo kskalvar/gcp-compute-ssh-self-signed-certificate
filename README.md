@@ -57,11 +57,9 @@ cp gcp-key-compute-kskalvar-yyyy-mm-dd.pub gcp-key-compute-kskalvar-yyyy-mm-dd-p
 ##### vim or sed commands to use or use any text editor
 ```
 s/ssh-rsa/kskalvar:ssh-rsa/
-
 ```
 ```
 s/ kskalvar$//
-
 ```
 
 ##### What your metadata should look like
