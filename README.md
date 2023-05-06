@@ -41,7 +41,7 @@ which GCP Service it's targeted to as well what account you will be required to 
 GCP Compute VM Instance.
 
 ```
-ssh-keygen -t rsa -f gcp-key-compute-kskalvar-2023-04-22 -C kskalvar -b 2048
+ssh-keygen -t rsa -f gcp-key-compute-kskalvar-yyyy-mm-dd -C kskalvar -b 2048
 
 ```
 
@@ -51,7 +51,7 @@ So we need to create a metadata file that fits the format GCP Compute Settings/M
 There's an before and after example below so you can see the difference.
 
 ```
-cp gcp-key-compute-kskalvar-2023-04-22.pub gcp-key-compute-kskalvar-2023-04-22-pub-metadata
+cp gcp-key-compute-kskalvar-yyyy-mm-dd.pub gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata
 
 ```
 ##### vim or sed commands to use or use any text editor
@@ -78,7 +78,7 @@ the GCP Console to do this as well. See: GCP Compute Engine/Settings/Metadata/SS
 
 ```
 gcloud compute project-info add-metadata \
---metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-2023-04-22-pub-metadata \
+--metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata \
 --project=<gcp project id>
 
 ```
@@ -102,7 +102,7 @@ NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_she
 NOTE: The userid you use to create the self-signed certificate is the userid you will use for login
 
 ```
-ssh -i gcp-key-compute-kskalvar-2023-04-22 -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
+ssh -i gcp-key-compute-kskalvar-yyyy-mm-dd -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
 
 ```
 Install Basic Tools
