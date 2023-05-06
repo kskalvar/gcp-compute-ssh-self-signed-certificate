@@ -31,7 +31,6 @@ the GCP SDK if it isn't already enabled.
 
 ```
 gcloud services list --enabled | grep Compute
-
 ```
 
 ### Create a ssh self signed certificate
@@ -42,7 +41,6 @@ GCP Compute VM Instance.
 
 ```
 ssh-keygen -t rsa -f gcp-key-compute-kskalvar-yyyy-mm-dd -C kskalvar -b 2048
-
 ```
 
 #### Edit gcp-key-metadata
@@ -52,7 +50,6 @@ There's an before and after example below so you can see the difference.
 
 ```
 cp gcp-key-compute-kskalvar-yyyy-mm-dd.pub gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata
-
 ```
 ##### vim or sed commands to use or use any text editor
 ```
@@ -78,7 +75,6 @@ the GCP Console to do this as well. See: GCP Compute Engine/Settings/Metadata/SS
 gcloud compute project-info add-metadata \
 --metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-yyyy-mm-dd-pub-metadata \
 --project=<gcp project id>
-
 ```
 ### Create cloud shell
 
@@ -91,7 +87,6 @@ gcloud compute instances create cloud-shell \
 --image-project=ubuntu-os-cloud \
 --machine-type=e2-micro \
 --scopes=https://www.googleapis.com/auth/cloud-platform
-
 ```
 ### Connect to cloud shell and Update Basic Tools
 
@@ -101,19 +96,16 @@ NOTE: The userid you use to create the self-signed certificate is the userid you
 
 ```
 ssh -i gcp-key-compute-kskalvar-yyyy-mm-dd -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
-
 ```
 Install Basic Tools
 ```
 sudo apt update
-
 ```
 ### Delete cloud shell
 
 Using the GCP SDK installed locally to delete the GCP Compute VM Instance we used as the cloud_shell.
 ```
 gcloud compute instances delete cloud-shell --quiet
- 
 ```
 ### Troubleshooting
 
