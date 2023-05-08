@@ -122,7 +122,7 @@ Connect to Linux VMs
 https://cloud.google.com/compute/docs/connect/standard-ssh#openssh-client
 
 Using SSH and a Self-Signed Certificate with GCP Compute Engine  
-https://github.com/kskalvar/gcp-compute-kskalvarssh-self-signed-certificate
+https://github.com/kskalvar/gcp-compute-ssh-self-signed-certificate
 
 Using SSH and a Self-Signed Certificate with GCP Compute Engine Presentation  
 https://www.youtube.com/@kal_technology/videos
