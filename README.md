@@ -11,8 +11,8 @@ certificate metadata to the GCP Compute Service so you can ssh to a Compute VM I
 local machine.
 ```
 ```
-Note: This how-to assumes you have a GCP Account, have installed GCP SDK locally
-      and have it configured it to access your GCP project
+Note: This how-to assumes you have a GCP Account, have a GCP Project created, have GCP SDK
+      installed locally, and have it configured it to access your GCP project
 ```
 Steps:  
 * [Check GCP Compute Engine API Enabled](#Check-GCP-compute-Engine-API-Enabled)
