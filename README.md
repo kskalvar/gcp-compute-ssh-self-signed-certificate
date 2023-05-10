@@ -73,8 +73,7 @@ the GCP Console to do this as well. See: GCP Compute Engine/Settings/Metadata/SS
 
 ```
 gcloud compute project-info add-metadata \
---metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-pub-metadata \
---project=<gcp project id>
+--metadata-from-file=ssh-keys=gcp-key-compute-kskalvar-pub-metadata
 ```
 ### Create cloud shell
 
