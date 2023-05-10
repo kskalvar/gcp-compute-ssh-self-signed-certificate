@@ -83,7 +83,7 @@ easily use the GCP Cloud Console if you're familiar with it.
 
 ```
 gcloud compute instances create cloud-shell \
---image=ubuntu-1804-bionic-v20230418 \
+--image=ubuntu-1804-bionic-v20230510 \
 --image-project=ubuntu-os-cloud \
 --machine-type=e2-micro \
 --scopes=https://www.googleapis.com/auth/cloud-platform
