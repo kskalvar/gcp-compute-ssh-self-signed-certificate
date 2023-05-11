@@ -116,6 +116,10 @@ existing .ssh directory in your home directory should elimiate these warnings.
 will notice an error for an "Invalid ssh key entry".  This error will not keep you from logging into
 the VM. See GCP Console/Compute Engine/VM Instances/cloud-shell/three dots on the right/View logs
 
+* When running gcloud compute instances create cloud-shell with --image=ubuntu-1804-bionic-v20230510
+you will received notice the image is outdated.  It will give you a recommended image.  Use that one
+instead.
+
 ### References
 
 Connect to Linux VMs  
