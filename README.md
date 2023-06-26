@@ -90,9 +90,9 @@ gcloud compute instances create cloud-shell \
 ```
 ### Connect to cloud shell and Update Basic Tools
 
-NOTE: The GCP Private Key you created should be in the directory you run ssh from  
-NOTE: You'll need the GCP Compute VM Instance Public IPv4 DNS for your cloud_shell  
-NOTE: The userid you use to create the self-signed certificate is the userid you will use for login
+NOTE: The GCP Private Key you created should be in the directory you ran ssh from  
+NOTE: You'll need the GCP Compute VM Instance Public IPv4 Address for your cloud_shell  
+NOTE: The userid you used to create the self-signed certificate is the userid you will use to login
 
 ```
 ssh -i gcp-key-compute-kskalvar -o "StrictHostKeyChecking no" kskalvar@<EXTERNAL_IP>
