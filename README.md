@@ -12,7 +12,8 @@ local machine.
 ```
 ```
 Note: Assumes you have a GCP Account, you have a GCP Project created and Compute Engine access
-      enabled, and you have the GCP SDK installed locally and configured to access the GCP Cloud  
+      enabled, and you have the GCP SDK installed locally and configured to access the GCP Cloud
+      project.  
 
 ```
 Steps:  
